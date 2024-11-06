@@ -1,12 +1,12 @@
 #wrap {
-    width: 600px;
+    width: 700px;
     margin:auto;
     border-width: 1px;
 
 }
 
-img {
-    margin-left: 200px;
+.main {
+    margin-left: 250px;
 }
 
 footer {
@@ -21,8 +21,35 @@ body {
     background-color: antiquewhite;
     font-family: 'Times New Roman', Times, serif;
     color: purple;
-}
+} 
 #welcome {
     text-align: center;
     font-size: x-large;
+}
+
+#carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-height: 300px;
+    overflow: hidden;
+    gap: 10px;
+}
+
+#carousel img {
+    max-height: 150px;
+    aspect-ratio: auto 100 / 200;
+    border-radius: 10px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+main {
+    margin-bottom: 50px;
 }
