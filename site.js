@@ -18,3 +18,6 @@ else if (isEvening)
 {
     message.textContent = "Good Evening, Welcome to Ismael's Page"
  }
+
+
+ localStorage.setItem("It's a secret to everybody", "Donald Trump won the elections")
