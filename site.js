@@ -76,7 +76,6 @@ showImages()
     }
     const poke = await getRandonPokemon()
     const renderPokemon = (pokemon)=>{
-        console.log(pokemon.sprites.front_default)
         const img = document.createElement('img')
         const div = document.querySelector('#Image')
         img.src = pokemon.sprites.front_default
