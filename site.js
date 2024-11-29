@@ -1,3 +1,4 @@
+(async()=>{
 var message = document.querySelector('#welcome')
 
 const hours = new Date().getHours()
@@ -61,3 +62,29 @@ setInterval(()=>{
 },5000)
 
 showImages()
+
+
+
+
+
+    const getRandonPokemon = async()=>{
+
+        const url = 'https://pokeapi.co/api/v2/pokemon/' + Math.floor(Math.random() * 150)
+        const response = await fetch(url)
+        const pokemon = await response.json();
+        return pokemon
+    }
+    const poke = await getRandonPokemon()
+    const renderPokemon = (pokemon)=>{
+        console.log(pokemon.sprites.front_default)
+        const img = document.createElement('img')
+        const div = document.querySelector('#Image')
+        img.src = pokemon.sprites.front_default
+        img.alt = pokemon.name
+        div.append(img)
+    }
+
+    renderPokemon(poke);
+})()
+
+

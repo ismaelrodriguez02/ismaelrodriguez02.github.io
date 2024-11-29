@@ -53,3 +53,7 @@ body {
 main {
     margin-bottom: 50px;
 }
+
+#Image {
+    text-align: center;
+}
