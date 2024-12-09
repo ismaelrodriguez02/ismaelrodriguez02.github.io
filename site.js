@@ -84,6 +84,31 @@ showImages()
     }
 
     renderPokemon(poke);
+
+    const mybutton = document.querySelector('#b');
+    const input = document.querySelector('#new-todo')
+    const todoList = document.querySelector('.todo-list')
+
+
+    const todos = JSON.parse(localStorage.getItem('todo-list')) || []
+
+    const renderTodos = ()=>{
+        todos.forEach((p)=>{
+            const li = document.createElement('li')
+            li.textContent = p.text
+            todoList.append(li) 
+        })
+    }
+
+    renderTodos();
+
+    mybutton.addEventListener('click', ()=>{
+        todos.push({ text: input.value, completed: false })
+        todoList.innerHTML = ''
+        localStorage.setItem('todo-list', JSON.stringify(todos))
+        renderTodos()
+    })
+
 })()
 
 
